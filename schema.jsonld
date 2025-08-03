@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mugabi Joe Phillips",
+  "alternateName": "Joe World 🌍",
+  "url": "https://joeworld222.github.io",
+  "sameAs": [
+    "https://t.me/joeworld222",
+    "mailto:joeworld222@gmail.com"
+  ],
+  "jobTitle": "Programmer, AI Builder, Tech Wizard",
+  "gender": "Male",
+  "nationality": "Ugandan",
+  "description": "Joe World is a Ugandan programmer, AI builder, and creative mind who develops modern web apps, visual effects, and educational content online."
+}
