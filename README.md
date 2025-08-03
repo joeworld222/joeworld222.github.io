@@ -1,5 +1,3 @@
-# joeworld222.github.io
-Official site For Joe World 🌍 by Mugabi Joe Phillips, the CEO Joe World TECH.  Explore the world of TECH
 # 👋 Welcome to Joe World 🌍
 
 **Real Name:** Mugabi Joe Phillips  
@@ -19,6 +17,8 @@ This is my official website built on **GitHub Pages**. I use it to showcase my:
 
 ## 💬 Let's Connect
 - Telegram: [@joeworld222](https://t.me/joeworld222)
-- Email: [joeworld222@gmail.com](mailto:joeworld222@gmail.com)
-
+- Email: [joeworld222@gmail.com
+- (mailto:joeworld222@gmail.com)
+- Whatsapp: .[For bussines]
+  (https://wa.me/+256752045708)
 > _“I don't just surf the web... I build it!”_ 😎🧠
