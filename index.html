@@ -55,69 +55,58 @@
   <link rel="stylesheet" href="/joeworld222/home.css">
   <script defer src="/joeworld222/home.js"></script>
 </head>
-<!-- home.html (Only Body Section) -->
-<body class="home-body">
-    <header>
-  <nav class="top-nav">
+    <body>
+  <header class="topbar">
     <div class="logo">Joe World 🌍</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="tutorials.html">Tutorials</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
+    <div class="mode-toggle" id="modeToggle" title="Toggle Theme">
+      🌙
     </div>
-    <div class="toggle" id="themeToggle">
-      <span id="sun">☀️</span>
-      <span id="moon" style="display:none;">🌙</span>
+  </header>  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="tutorials.html">📘 Tutorials</a></li>
+      <li><a href="about.html">🙋‍♂️ About</a></li>
+      <li><a href="contact.html">✉️ Contact</a></li>
+      <li><a href="privacy.html">🔒 Privacy</a></li>
+      <li><a href="terms.html">📜 Terms</a></li>
+      <li><a href="https://wa.me/256752045708" target="_blank">WhatsApp</a></li>
+      <li><a href="https://t.me/joeworld222" target="_blank">Telegram</a></li>
+      <li><a href="https://youtube.com/@joeworld" target="_blank">YouTube</a></li>
+      <li><a href="https://tiktok.com/@joeworld" target="_blank">TikTok</a></li>
+    </ul>
+  </nav>  <main class="content">
+    <section class="intro">
+      <h1>Welcome to <span class="highlight">Joe World 🌍</span></h1>
+      <p>Learn, Code, Create & Transform the Digital World with HTML, CSS & JavaScript 🔥</p>
+    </section><section class="tutorials">
+  <h2>🔥 Hot Tutorials</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>HTML Basics</h3>
+      <p>Learn the structure of web pages using HTML tags and elements.</p>
+      <a href="html-tutorial.html">Start</a>
     </div>
-  </nav>
-
-  <aside class="side-nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="tutorials.html">📚 Tutorials</a>
-    <a href="about.html">👤 About</a>
-    <a href="contact.html">📞 Contact</a>
-    <a href="privacy.html">🔐 Privacy</a>
-    <a href="terms.html">⚖️ Terms</a>
-  </aside>
-</header>
-
-<main>
-  <section class="hero">
-    <h1>Welcome to Joe World 🌍</h1>
-    <p>Your home of tech, code, and cool tutorials!</p>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 Joe World 🌍. All rights reserved.</p>
-  <div class="social-icons">
-    <a href="https://wa.me/256752045708" target="_blank">WhatsApp</a>
-    <a href="https://t.me/joeworld222" target="_blank">Telegram</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://tiktok.com" target="_blank">TikTok</a>
+    <div class="card">
+      <h3>CSS Styling</h3>
+      <p>Make your website shine with styles, animations, and effects.</p>
+      <a href="css-tutorial.html">Start</a>
+    </div>
+    <div class="card">
+      <h3>JavaScript Magic</h3>
+      <p>Bring your site to life with interactivity and dynamic actions.</p>
+      <a href="js-tutorial.html">Start</a>
+    </div>
   </div>
-</footer>
-  <section class="hero">
-    <h1 class="hero-title">Welcome to Joe World 🌍</h1>
-    <p class="hero-subtitle">Learn. Code. Rule The Web.</p>
-    <div class="hero-buttons">
-      <a href="tutorials.html" class="btn-glow">Start Tutorials</a>
-      <a href="about.html" class="btn-glow">About Joe World</a>
-      <a href="contact.html" class="btn-glow">Contact</a>
-    </div>
-  </section>
+</section>
 
-  <footer class="footer">
-    <p>Follow me: 
-      <a href="https://t.me/joeworld222" target="_blank">@joeworld222</a> | 
-      <a href="https://wa.me/256752045708" target="_blank">WhatsApp</a> | 
-      <a href="https://youtube.com/@joeworld222" target="_blank">YouTube</a> | 
-      <a href="https://tiktok.com/@joeworld222" target="_blank">TikTok</a>
-    </p>
-    <p>&copy; 2025 Joe World 🌍. All rights reserved.</p>
+<section class="editor">
+  <h2>🎮 Try it Yourself</h2>
+  <textarea id="codeInput" placeholder="Write some HTML, CSS, or JS here..."></textarea>
+  <iframe id="preview"></iframe>
+</section>
+
+  </main>  <footer class="footer">
+    <p>© 2025 Joe World 🌍. All rights reserved.</p>
   </footer>
 </body>
-</html>
+      </html>
