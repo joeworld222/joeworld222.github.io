@@ -1,20 +1,4 @@
 /* home.css */
-body.home-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #111, #222);
-  color: lemonchiffon;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-
-.hero {
-  text-align: center;
-  padding: 6rem 1rem 4rem;
-}
-
 .hero-title {
   font-size: 3rem;
   text-shadow: 0 0 20px #f0f, 0 0 40px #0ff;
@@ -53,14 +37,6 @@ body.home-body {
   box-shadow: 0 0 20px #f0f, 0 0 40px #0ff;
 }
 
-.footer {
-  margin-top: auto;
-  background: #000000dd;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  border-top: 1px solid #555;
-}
 
 .footer a {
   color: #0ff;
