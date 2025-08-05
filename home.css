@@ -71,7 +71,87 @@ body.home-body {
 .footer a:hover {
   text-decoration: underline;
 }
+/* Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease;
+}
 
+/* Light & Dark Mode Vars */
+:root {
+  --bg: #fffacd;
+  --text: #111;
+  --nav-bg: #f0f0f0;
+}
+.dark-mode {
+  --bg: #111;
+  --text: #fffacd;
+  --nav-bg: #222;
+}
+
+/* Top Nav */
+.top-nav {
+  background: var(--nav-bg);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links a {
+  margin: 0 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.toggle {
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+/* Side Nav */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -180px;
+  width: 180px;
+  height: 100%;
+  background-color: var(--nav-bg);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+}
+.side-nav a {
+  display: block;
+  padding: 1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.side-nav:hover {
+  left: 0;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--nav-bg);
+}
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+  }
 /* Animations */
 @keyframes fadeInUp {
   from {
