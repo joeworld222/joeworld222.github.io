@@ -1,138 +1,132 @@
-/* home.css */
-.hero-title {
-  font-size: 3rem;
-  text-shadow: 0 0 20px #f0f, 0 0 40px #0ff;
-  animation: fadeInUp 1s ease-out;
-}
-
-.hero-subtitle {
-  margin-top: 1rem;
-  font-size: 1.4rem;
-  color: #ccc;
-}
-
-.hero-buttons {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.btn-glow {
-  padding: 12px 28px;
-  border: none;
-  border-radius: 10px;
-  background-color: transparent;
-  color: lemonchiffon;
-  text-decoration: none;
-  font-size: 1rem;
-  border: 1px solid lemonchiffon;
-  box-shadow: 0 0 12px #0ff, 0 0 24px #f0f;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn-glow:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px #f0f, 0 0 40px #0ff;
-}
-
-
-.footer a {
-  color: #0ff;
-  margin: 0 6px;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-/* Layout */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  transition: all 0.4s ease;
-}
-
-/* Light & Dark Mode Vars */
+/* Root Variables */
 :root {
-  --bg: #fffacd;
-  --text: #111;
-  --nav-bg: #f0f0f0;
-}
-.dark-mode {
-  --bg: #111;
-  --text: #fffacd;
-  --nav-bg: #222;
+  --primary-color: lemonchiffon;
+  --dark-bg: #0a0a0a;
+  --light-bg: #ffffff;
+  --transition-speed: 0.3s;
 }
 
-/* Top Nav */
-.top-nav {
-  background: var(--nav-bg);
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
+  color: #000;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--primary-color);
+}
+
+/* Header */
+header {
+  background: var(--primary-color);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.nav-links a {
-  margin: 0 10px;
-  color: var(--text);
-  text-decoration: none;
-}
+
 .logo {
-  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
   font-weight: bold;
 }
-.toggle {
-  cursor: pointer;
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Toggle */
+.toggle-theme {
+  background: none;
+  border: none;
   font-size: 1.4rem;
+  cursor: pointer;
 }
 
 /* Side Nav */
 .side-nav {
   position: fixed;
-  top: 0;
-  left: -180px;
-  width: 180px;
+  top: 60px;
+  left: -200px;
+  width: 200px;
   height: 100%;
-  background-color: var(--nav-bg);
-  padding-top: 60px;
-  transition: left 0.3s ease;
-}
-.side-nav a {
-  display: block;
+  background: #111;
+  color: #fff;
+  transition: left var(--transition-speed);
   padding: 1rem;
-  color: var(--text);
-  text-decoration: none;
 }
-.side-nav:hover {
+
+.side-nav.show {
   left: 0;
 }
 
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
+.side-nav a {
+  display: block;
+  color: var(--primary-color);
+  padding: 0.5rem 0;
+  text-decoration: none;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: var(--nav-bg);
+.side-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
-.social-icons a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: var(--text);
+
+/* Main */
+main {
+  padding: 2rem;
+}
+
+/* Cards */
+.card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
   }
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+
+  .side-nav {
+    width: 100%;
+    left: -100%;
+  }
+
+  .side-nav.show {
+    left: 0;
+  }
+}    transform: translateY(30px);
   }
   to {
     opacity: 1;
