@@ -1,0 +1,112 @@
+/* Google Fonts */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Header and Navigation */
+header {
+  background: #111;
+  padding: 20px 40px;
+  box-shadow: 0 0 15px #f0f;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: lemonchiffon;
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: #0ff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #f0f;
+  color: #000;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #0ff3, #f0f3);
+  box-shadow: 0 0 20px #f0f;
+  border-bottom: 2px solid lemonchiffon;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: lemonchiffon;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #eee;
+}
+
+/* Content Section */
+.content {
+  padding: 40px 20px;
+  display: grid;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #1a1a1a;
+  border-left: 4px solid #f0f;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #0ff6;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  color: lemonchiffon;
+  font-size: 1.4rem;
+}
+
+.card p {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  border-top: 1px solid #333;
+  color: #999;
+  font-size: 0.9rem;
+}
