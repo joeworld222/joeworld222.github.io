@@ -1,0 +1,74 @@
+/* Tutorials Page Styling */
+
+.tutorials-landing {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #0f0f2b;
+  color: #fff;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: lemonchiffon;
+  font-family: 'Orbitron', sans-serif;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #fff, 0 0 10px #ff0; }
+  to   { text-shadow: 0 0 15px #fff, 0 0 25px #ff0; }
+}
+
+.intro-text {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.tutorial-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.tutorial-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid lemonchiffon;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 0 20px #00ffff33;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tutorial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #0ff;
+}
+
+.start-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #ff00ff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #ff77ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tutorial-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
