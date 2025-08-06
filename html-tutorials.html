@@ -2,126 +2,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Tutorials | Joe World 🌍</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Joe World 🌍 | HTML Lessons</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
     }
-    .lesson {
-      margin: 2rem 0;
-      padding: 2rem;
-      background: #f8f8ff;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .lesson h2 {
-      color: #8a2be2;
-    }
-    nav.lesson-nav {
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
       position: sticky;
       top: 0;
-      background: lemonchiffon;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    nav {
+      background-color: #444;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      z-index: 99;
+      justify-content: center;
+      padding: 10px;
     }
-    nav.lesson-nav a {
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      background: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    nav.lesson-nav a:hover {
-      background: #8a2be2;
+    nav a {
       color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .code-editor {
-      margin-top: 1rem;
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h2 {
+      color: #0066cc;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      overflow-x: auto;
+      border-radius: 5px;
     }
     textarea {
       width: 100%;
-      height: 200px;
+      height: 120px;
+      margin-top: 10px;
       font-family: monospace;
-      padding: 1rem;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      resize: vertical;
+      font-size: 16px;
+      padding: 10px;
     }
     iframe {
       width: 100%;
-      height: 300px;
+      height: 200px;
       border: 1px solid #ccc;
-      margin-top: 1rem;
-      background: white;
+      margin-top: 10px;
+      border-radius: 5px;
     }
-    button.run-btn {
-      background: #8a2be2;
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #0066cc;
       color: white;
       border: none;
-      padding: 0.7rem 1.5rem;
-      font-weight: bold;
-      border-radius: 10px;
+      border-radius: 5px;
       cursor: pointer;
-      margin-top: 0.5rem;
+    }
+    button:hover {
+      background: #0057a3;
     }
   </style>
 </head>
 <body>
   <header>
-    <!-- Your existing nav -->
-  </header>  <main>
-    <h1>Learn HTML from Scratch 🧠💻</h1><nav class="lesson-nav">
-  <a href="#lesson1">Lesson 1</a>
-  <a href="#lesson2">Lesson 2</a>
-  <a href="#lesson3">Lesson 3</a>
-  <a href="#lesson4">Lesson 4</a>
-  <a href="#lesson5">Lesson 5</a>
-  <!-- Add up to lesson 15 -->
-</nav>
-
-<section id="lesson1" class="lesson">
-  <h2>Lesson 1: Introduction to HTML</h2>
-  <p>HTML (HyperText Markup Language) is the standard language used to create webpages. It tells the browser how to structure content like text, images, and links.</p>
-  <p>HTML files end with <code>.html</code> and use tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;a&gt;</code> to define elements.</p>
-  <div class="code-editor">
-    <label for="code1">Try it:</label>
-    <textarea id="code1">&lt;!DOCTYPE html&gt;
-
-<html> <head> <title>My First Page</title> </head> <body> <h1>Hello, world!</h1> <p>This is my first web page.</p> </body> </html></textarea> <button class="run-btn" onclick="runCode('code1', 'output1')">Run</button> <iframe id="output1"></iframe> </div> </section>
-
-<section id="lesson2" class="lesson">
-  <h2>Lesson 2: HTML Tags</h2>
-  <p>Tags are used to mark up the start and end of elements in HTML. Most tags come in pairs like <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>.</p>
-  <p>Some important tags:</p>
-  <ul>
-    <li><code>&lt;h1&gt; to &lt;h6&gt;</code> - Headings</li>
-    <li><code>&lt;p&gt;</code> - Paragraph</li>
-    <li><code>&lt;br&gt;</code> - Line break (self-closing)</li>
-    <li><code>&lt;hr&gt;</code> - Horizontal rule (self-closing)</li>
-    <li><code>&lt;a&gt;</code> - Hyperlink</li>
-    <li><code>&lt;img&gt;</code> - Image (self-closing)</li>
-    <li><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> - Grouping elements</li>
-  </ul>
-  <div class="code-editor">
-    <label for="code2">Try it:</label>
-    <textarea id="code2">&lt;h1&gt;Big Heading&lt;/h1&gt;
-
-<p>This is a paragraph with a <a href="https://joeworld222.github.io">link</a>.</p></textarea> <button class="run-btn" onclick="runCode('code2', 'output2')">Run</button> <iframe id="output2"></iframe> </div> </section>
-
-<!-- Lessons 3 to 15 would continue here following same structure -->
-
-  </main>  <script>
+    <h1>Joe World 🌍 - HTML Lessons</h1>
+  </header>
+  <nav>
+    <a href="#lesson1">Lesson 1</a>
+    <a href="#lesson2">Lesson 2</a>
+    <a href="#lesson3">Lesson 3</a>
+    <a href="#lesson4">Lesson 4</a>
+    <a href="#lesson5">Lesson 5</a>
+    <!-- Add more lessons as needed -->
+  </nav>  <section id="lesson1">
+    <h2>Lesson 1: Introduction to HTML</h2>
+    <p>HTML stands for HyperText Markup Language. It is used to create web pages and web applications.</p>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+    <textarea id="code1">&lt;h1&gt;Hello, Joe World 🌍!&lt;/h1&gt;</textarea>
+    <button onclick="runCode('code1','result1')">Run Code</button>
+    <iframe id="result1"></iframe>
+  </section>  <section id="lesson2">
+    <h2>Lesson 2: HTML Tags</h2>
+    <p>Tags are used to mark up the start and end of an HTML element.</p>
+    <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;a href=&quot;https://example.com&quot;&gt;Visit Site&lt;/a&gt;</pre>
+    <textarea id="code2">&lt;p&gt;Joe World 🌍 is amazing!&lt;/p&gt;</textarea>
+    <button onclick="runCode('code2','result2')">Run Code</button>
+    <iframe id="result2"></iframe>
+  </section>  <section id="lesson3">
+    <h2>Lesson 3: Lists in HTML</h2>
+    <p>There are two types of lists: ordered and unordered.</p>
+    <pre>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</pre>
+    <textarea id="code3">&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;</textarea>
+    <button onclick="runCode('code3','result3')">Run Code</button>
+    <iframe id="result3"></iframe>
+  </section>  <!-- Add more lessons with same structure -->  <script>
     function runCode(textareaId, iframeId) {
       const code = document.getElementById(textareaId).value;
       const iframe = document.getElementById(iframeId);
