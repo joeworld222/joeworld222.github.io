@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Tutorials | Joe World 🌍</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .lesson {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: #f8f8ff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .lesson h2 {
+      color: #8a2be2;
+    }
+    nav.lesson-nav {
+      position: sticky;
+      top: 0;
+      background: lemonchiffon;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      z-index: 99;
+    }
+    nav.lesson-nav a {
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      background: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    nav.lesson-nav a:hover {
+      background: #8a2be2;
+      color: white;
+    }
+    .code-editor {
+      margin-top: 1rem;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      padding: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      resize: vertical;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+      background: white;
+    }
+    button.run-btn {
+      background: #8a2be2;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Your existing nav -->
+  </header>  <main>
+    <h1>Learn HTML from Scratch 🧠💻</h1><nav class="lesson-nav">
+  <a href="#lesson1">Lesson 1</a>
+  <a href="#lesson2">Lesson 2</a>
+  <a href="#lesson3">Lesson 3</a>
+  <a href="#lesson4">Lesson 4</a>
+  <a href="#lesson5">Lesson 5</a>
+  <!-- Add up to lesson 15 -->
+</nav>
+
+<section id="lesson1" class="lesson">
+  <h2>Lesson 1: Introduction to HTML</h2>
+  <p>HTML (HyperText Markup Language) is the standard language used to create webpages. It tells the browser how to structure content like text, images, and links.</p>
+  <p>HTML files end with <code>.html</code> and use tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;a&gt;</code> to define elements.</p>
+  <div class="code-editor">
+    <label for="code1">Try it:</label>
+    <textarea id="code1">&lt;!DOCTYPE html&gt;
+
+<html> <head> <title>My First Page</title> </head> <body> <h1>Hello, world!</h1> <p>This is my first web page.</p> </body> </html></textarea> <button class="run-btn" onclick="runCode('code1', 'output1')">Run</button> <iframe id="output1"></iframe> </div> </section>
+
+<section id="lesson2" class="lesson">
+  <h2>Lesson 2: HTML Tags</h2>
+  <p>Tags are used to mark up the start and end of elements in HTML. Most tags come in pairs like <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>.</p>
+  <p>Some important tags:</p>
+  <ul>
+    <li><code>&lt;h1&gt; to &lt;h6&gt;</code> - Headings</li>
+    <li><code>&lt;p&gt;</code> - Paragraph</li>
+    <li><code>&lt;br&gt;</code> - Line break (self-closing)</li>
+    <li><code>&lt;hr&gt;</code> - Horizontal rule (self-closing)</li>
+    <li><code>&lt;a&gt;</code> - Hyperlink</li>
+    <li><code>&lt;img&gt;</code> - Image (self-closing)</li>
+    <li><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> - Grouping elements</li>
+  </ul>
+  <div class="code-editor">
+    <label for="code2">Try it:</label>
+    <textarea id="code2">&lt;h1&gt;Big Heading&lt;/h1&gt;
+
+<p>This is a paragraph with a <a href="https://joeworld222.github.io">link</a>.</p></textarea> <button class="run-btn" onclick="runCode('code2', 'output2')">Run</button> <iframe id="output2"></iframe> </div> </section>
+
+<!-- Lessons 3 to 15 would continue here following same structure -->
+
+  </main>  <script>
+    function runCode(textareaId, iframeId) {
+      const code = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    }
+  </script></body>
+</html>
