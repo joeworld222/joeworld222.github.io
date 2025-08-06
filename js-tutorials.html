@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joe World 🌍 - JavaScript Lessons</title>
+  <style>
+    :root {
+      --main-bg: #0d1117;
+      --card-bg: #161b22;
+      --accent: #f0f;
+      --text: #eee;
+      --highlight: lemonchiffon;
+    }
+
+    body {
+      background-color: var(--main-bg);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    header h1 {
+      color: var(--accent);
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .lesson-card {
+      background-color: var(--card-bg);
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      border-left: 5px solid var(--accent);
+      border-radius: 10px;
+    }
+
+    .lesson-card h2 {
+      color: var(--highlight);
+    }
+
+    .lesson-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .editor {
+      margin-top: 2rem;
+    }
+
+    .editor textarea {
+      width: 100%;
+      height: 200px;
+      background: #0d1117;
+      color: #fff;
+      border: 1px solid var(--accent);
+      border-radius: 5px;
+      padding: 1rem;
+      font-family: monospace;
+      font-size: 1rem;
+    }
+
+    .editor button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      border: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    iframe {
+      margin-top: 1rem;
+      width: 100%;
+      height: 200px;
+      border: 1px solid var(--highlight);
+      border-radius: 5px;
+      background: #fff;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      font-size: 0.8rem;
+      margin-top: 3rem;
+      padding-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Lessons - Joe World 🌍</h1>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="html-lessons.html">HTML</a>
+      <a href="css-lessons.html">CSS</a>
+      <a href="js-lessons.html">JS</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="lesson-card">
+      <h2>Lesson 1: Intro to JavaScript</h2>
+      <p>JavaScript is the language that brings your website to life! It's used to control behavior, respond to events, and make your site dynamic and interactive.</p>
+      <p>Example: <code>console.log("Hello, Joe World!");</code></p>
+    </div>
+
+    <div class="lesson-card">
+      <h2>Lesson 2: Variables</h2>
+      <p>You can store data using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+      <p>Example: <code>let name = "Joe";</code></p>
+    </div>
+
+    <div class="lesson-card">
+      <h2>Lesson 3: Functions</h2>
+      <p>Functions let you run code blocks when you need them.</p>
+      <p>Example:</p>
+      <pre><code>
+function greet() {
+  alert("Hi Joe World 🌍");
+}
+greet();
+      </code></pre>
+    </div>
+
+    <!-- ... More lessons up to Lesson 15 ... -->
+    <div class="lesson-card">
+      <h2>Lesson 15: DOM Manipulation</h2>
+      <p>DOM = Document Object Model. You can use JavaScript to interact with HTML elements using the DOM.</p>
+      <p>Example:</p>
+      <pre><code>
+document.getElementById("myHeading").innerText = "Changed!";
+      </code></pre>
+    </div>
+
+    <!-- Live Editor -->
+    <div class="editor">
+      <h2>🎯 Practice What You’ve Learned</h2>
+      <textarea id="jsCode">// Write your JS code here
+document.body.style.backgroundColor = "#333";
+document.write("Hello Joe World 🌍!");</textarea>
+      <button onclick="runJS()">▶ Run Code</button>
+      <iframe id="output"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ by Joe World 🌍 | JavaScript Rocks 💥
+  </footer>
+
+  <script>
+    function runJS() {
+      const code = document.getElementById("jsCode").value;
+      const output = document.getElementById("output");
+      const iframeDoc = output.contentDocument || output.contentWindow.document;
+      iframeDoc.open();
+      iframeDoc.write("<script>" + code + "<\/script>");
+      iframeDoc.close();
+    }
+  </script>
+</body>
+</html>
