@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe World 🌍 - CSS Lessons</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }body {
+  background: #111;
+  color: lemonchiffon;
+  padding-bottom: 100px;
+}
+
+header {
+  background: #222;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px #000000a2;
+}
+
+header h1 {
+  color: #0ff;
+  font-size: 2rem;
+}
+
+nav {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0.8rem 0;
+}
+
+nav a {
+  color: lemonchiffon;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f0f;
+}
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #444;
+}
+
+section h2 {
+  color: #0ff;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+.lesson-link {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #f0f;
+  text-decoration: underline;
+}
+
+.editor {
+  margin-top: 1rem;
+  background: #222;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  background: #000;
+  color: lemonchiffon;
+  border: none;
+  padding: 0.5rem;
+  font-family: monospace;
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  background: white;
+}
+
+.backtop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #f0f;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+  </style>
+</head><body>
+  <header>
+    <h1>🌍 Joe World CSS Masterclass</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="html-lessons.html">HTML Lessons</a>
+    <a href="css-lessons.html">CSS Lessons</a>
+    <a href="js-lessons.html">JavaScript Lessons</a>
+  </nav>  <section>
+    <h2>Jump to Lesson</h2>
+    <div id="toc"></div>
+  </section>  <div id="lessons-container"></div>  <div class="backtop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">🔝 Top</div>  <script>
+    const lessons = [
+      {
+        title: "Lesson 1: Introduction to CSS",
+        content: `CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations.`,
+        code: `body {
+  background-color: lightblue;
+}`
+      },
+      {
+        title: "Lesson 2: Selectors",
+        content: `Selectors are used to target the HTML elements you want to style. Examples include element selectors, class selectors, and ID selectors.`,
+        code: `h1 {
+  color: red;
+}`
+      },
+      {
+        title: "Lesson 3: Colors",
+        content: `CSS supports color names, HEX, RGB, RGBA, HSL, and HSLA color formats.`,
+        code: `p {
+  color: #f0f;
+  background: rgba(0, 255, 255, 0.2);
+}`
+      },
+      {
+        title: "Lesson 4: Box Model",
+        content: `All HTML elements can be considered as boxes. The CSS box model includes: margins, borders, padding, and the actual content.`,
+        code: `.box {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #0ff;
+}`
+      },
+      {
+        title: "Lesson 5: Fonts and Text",
+        content: `You can style text using font-family, font-size, font-weight, line-height, letter-spacing, etc.`,
+        code: `p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}`
+      },
+      {
+        title: "Lesson 6: Display & Position",
+        content: `Display defines how an element is shown (block, inline, flex, grid), and position (static, relative, absolute, fixed, sticky) controls its layout.`,
+        code: `.box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}`
+      },
+      {
+        title: "Lesson 7: Flexbox",
+        content: `Flexbox makes it easier to design flexible responsive layout structure without using float or positioning.`,
+        code: `.container {
+  display: flex;
+  gap: 10px;
+}`
+      },
+      {
+        title: "Lesson 8: Grid",
+        content: `CSS Grid Layout is a two-dimensional layout system for the web.`,
+        code: `.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}`
+      },
+      {
+        title: "Lesson 9: Transitions",
+        content: `Transitions allow you to change property values smoothly (over a given duration).`,
+        code: `button {
+  transition: all 0.3s ease;
+}`
+      },
+      {
+        title: "Lesson 10: Animations",
+        content: `@keyframes and the animation property let you animate almost anything.`,
+        code: `@keyframes glow {
+  0% { box-shadow: 0 0 5px #0ff; }
+  100% { box-shadow: 0 0 20px #f0f; }
+}`
+      }
+    ];
+
+    const toc = document.getElementById("toc");
+    const container = document.getElementById("lessons-container");
+
+    lessons.forEach((lesson, i) => {
+      const id = `lesson${i + 1}`;
+
+      // TOC links
+      const link = document.createElement("div");
+      link.className = "lesson-link";
+      link.innerText = lesson.title;
+      link.onclick = () => {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      };
+      toc.appendChild(link);
+
+      // Lesson content
+      const section = document.createElement("section");
+      section.id = id;
+      section.innerHTML = `
+        <h2>${lesson.title}</h2>
+        <p>${lesson.content}</p>
+        <div class="editor">
+          <textarea oninput="updateOutput(event, ${i})">${lesson.code}</textarea><iframe id="output${i}"></iframe>
+    </div>
+  `;
+  container.appendChild(section);
+});
+
+function updateOutput(event, i) {
+  const code = event.target.value;
+  const iframe = document.getElementById("output" + i);
+  const doc = iframe.contentDocument || iframe.contentWindow.document;
+  doc.open();
+  doc.write(`<style>${code}</style><div class='box'>Test Content</div>`);
+  doc.close();
+}
+
+  </script>
+</body></html>
