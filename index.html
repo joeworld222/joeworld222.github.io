@@ -4,7 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 🔍 SEO Meta Description -->
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/propellerads-sw.js')
+      .then(() => console.log('PropellerAds Service Worker registered!'))
+      .catch(error => console.error('Service Worker registration failed:', error));
+  }
+  </script>
+    
+    <!-- 🔍 SEO Meta Description -->
   <meta name="description" content="Welcome to Joe World 🌍 – The Tech Wizard's space of futuristic AI, Web Design, Development, CyberSecurity, and smart innovation." />
 
   <!-- 🔑 SEO Keywords -->
